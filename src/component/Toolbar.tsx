@@ -73,9 +73,15 @@ const Toolbar = () => {
                   className="fixed inset-0 w-full h-full z-10 "
                   onClick={() => setOpenDropDown((prev) => !prev)}
                 ></div>
-                <div className="absolute  top-12 lg:top-7 mt-2 right-0 bg-white w-full lg:w-48 rounded-md shadow-lg py-1 ring-1 ring-black ring-opacity-5 z-20">
+                <div
+                  className="absolute  top-12 lg:top-7 mt-2 right-0 bg-white w-full lg:w-48 rounded-md shadow-lg py-1 ring-1 ring-black ring-opacity-5 z-20"
+                  onClick={() => setOpenDropDown((prev) => !prev)}
+                >
                   <div className="lg:hidden border-b border-gray-200">
-                    <div className="px-4">
+                    <div
+                      className="px-4"
+                      onClick={(event) => event.stopPropagation()}
+                    >
                       <SearchForm />
                     </div>
                     <a
