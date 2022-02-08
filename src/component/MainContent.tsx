@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import Toolbar from "./Toolbar";
 
 const MainContent = () => {
   const [openSideBar, setOpenSideBar] = useState(false);
   return (
     <div className="w-full p-4 lg:p-10 flex flex-col">
-      <div className="bg-gray-300 rounded-xl h-14">seacrh</div>
+      <Toolbar />
       <div className="bg-gray-300 rounded-xl mt-4 lg:hidden">
         <button
           className="block w-32 h-10 bg-blue-600 mx-auto"
