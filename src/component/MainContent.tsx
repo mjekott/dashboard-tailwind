@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Toolbar from "./Toolbar";
+import Blog from "./Blog";
 
 const MainContent = () => {
   const [openSideBar, setOpenSideBar] = useState(false);
   return (
-    <div className="w-full p-4 lg:p-10 flex flex-col">
+    <div className="w-full p-4 lg:p-10 flex flex-col ">
       <Toolbar />
       <div className="bg-gray-300 rounded-xl mt-4 lg:hidden">
         <button
@@ -14,7 +15,7 @@ const MainContent = () => {
           Toggle sidebar
         </button>
       </div>
-      <div className="overflow-hidden flex-1 ">
+      <div className="overflow-x-hidden flex-1 lg:overflow-visible pb-20 ">
         <div
           className={`transform ${
             openSideBar ? "-translate-x-full" : ""
@@ -103,9 +104,9 @@ const MainContent = () => {
               <div className="bg-gray-300 rounded-xl h-28 mt-4 lg:mt-10 w-full">
                 hello
               </div>
-              <div className="flex space-x-4 lg:space-x-10 mt-4  lg:mt-10">
-                <div className="bg-gray-300 rounded-xl h-28 w-full"></div>
-                <div className="bg-gray-300 rounded-xl h-28 w-full"></div>
+              <div className="flex flex-col lg:flex-row w-full lg:space-x-10  mt-4  lg:mt-10">
+                <div className="bg-gray-300 rounded-xl h-28 w-full lg:w-1/2"></div>
+                <Blog />
               </div>
             </div>
             <div className="lg:w-1/4 w-full bg-gray-300 rounded-xl ">
