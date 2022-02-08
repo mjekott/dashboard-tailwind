@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Toolbar from "./Toolbar";
 import Blog from "./Blog";
+import Statistics from "./Statistics";
 
 const MainContent = () => {
   const [openSideBar, setOpenSideBar] = useState(false);
   return (
-    <div className="w-full p-4 lg:p-10 flex flex-col ">
+    <div className="w-full p-4 lg:p-10 flex flex-col overflow-y-scroll ">
       <Toolbar />
       <div className="bg-gray-300 rounded-xl mt-4 lg:hidden">
         <button
@@ -101,9 +102,7 @@ const MainContent = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-gray-300 rounded-xl h-28 mt-4 lg:mt-10 w-full">
-                hello
-              </div>
+              <Statistics />
               <div className="flex flex-col lg:flex-row w-full lg:space-x-10  mt-4  lg:mt-10">
                 <div className="bg-gray-300 rounded-xl h-28 w-full lg:w-1/2"></div>
                 <Blog />

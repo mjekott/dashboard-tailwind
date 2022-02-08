@@ -3,7 +3,7 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <div className="flex space-x-4 lg:space-y-0 mt-4 lg:mt-0 w-full  overflow-x-scroll no-scrollbar lg:w-1/2 relative ">
+    <div className="flex space-x-4 lg:space-y-0 mt-4 lg:mt-0 w-full  overflow-x-scroll scrollbar-thin scrollbar-thumb-gray-300  scrollbar-track-gray-100 lg:w-1/2 relative ">
       <div className="flex flex-col space-y-1 bg-white shadow-lg border border-gray-100 p-5 w-full min-w-full ">
         <div className="flex items-center space-x-2">
           <div className="w-10 h-10 overflow-hidden rounded-full">
