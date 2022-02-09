@@ -6,7 +6,7 @@ import NavBar from "./component/NavBar";
 
 function App() {
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen bg-blue-800">
       <NavBar />
       <MainContent />
     </div>

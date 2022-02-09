@@ -2,28 +2,29 @@ import React, { useState } from "react";
 import Toolbar from "./Toolbar";
 import Blog from "./Blog";
 import Statistics from "./Statistics";
+import Sidebar from "./SideBar";
 
 const MainContent = () => {
   const [openSideBar, setOpenSideBar] = useState(false);
   return (
-    <div className="w-full p-4 lg:p-10 flex flex-col overflow-y-scroll ">
+    <div className="w-full lg:rounded-tl-3xl lg:rounded-bl-3xl bg-white p-4 lg:p-10 flex flex-col overflow-y-scroll ">
       <Toolbar />
-      <div className="bg-gray-300 rounded-xl mt-4 lg:hidden">
+      {/*    <div className="bg-gray-300 rounded-xl mt-4 lg:hidden">
         <button
           className="block w-32 h-10 bg-blue-600 mx-auto"
           onClick={() => setOpenSideBar((prev) => !prev)}
         >
           Toggle sidebar
         </button>
-      </div>
+      </div> */}
       <div className="overflow-x-hidden flex-1 lg:overflow-visible pb-20 ">
         <div
           className={`transform ${
             openSideBar ? "-translate-x-full" : ""
           } transition-all duration-300 lg:transform-none`}
         >
-          <div className="flex mt-4 lg:mt-10 space-x-4 lg:space-x-10">
-            <div className="w-full flex-shrink-0 flex flex-col lg:flex-shrink lg lg:w-3/4  rounded-xl">
+          <div className="flex mt-4 lg:mt-10  lg:space-x-10">
+            <div className="w-full flex-shrink-0 flex flex-col lg:flex-shrink  lg:w-3/4  rounded-xl">
               <div className="flex space-x-4 lg:space-x-10">
                 <div className="w-1/3 bg-white shadow-lg border border-gray-100 rounded-xl flex flex-col lg:flex-row items-center justify-center lg:py-5 lg:px-4 px-2 py-3 space-x-0 lg:space-x-4 cursor-auto ">
                   <div className="bg-indigo-50 rounded-lg p-2 text-blue-800 w-full lg:w-auto">
@@ -104,13 +105,10 @@ const MainContent = () => {
               </div>
               <Statistics />
               <div className="flex flex-col lg:flex-row w-full lg:space-x-10  mt-4  lg:mt-10">
-                <div className="bg-gray-300 rounded-xl h-28 w-full lg:w-1/2"></div>
                 <Blog />
               </div>
             </div>
-            <div className="lg:w-1/4 w-full bg-gray-300 rounded-xl ">
-              sidebar
-            </div>
+            <Sidebar />
           </div>
         </div>
       </div>
